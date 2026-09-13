@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1">
+<title>Yanna</title>
+<meta name="description" content="for Yanna.">
+<meta name="theme-color" content="#07040d">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-state="intro">
+
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="glow-field" aria-hidden="true"></div>
+
+  <!-- ============ INTRO ============ -->
+  <section id="stage-intro" class="stage stage--intro" aria-label="Opening">
+    <div class="intro-content">
+      <h1 class="intro-name reveal-item">Yanna</h1>
+      <p class="intro-sub reveal-item">this is for you.</p>
+      <button id="open-btn" class="open-btn reveal-item" type="button">
+        <span>open</span> <span class="heart-mark">♡</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ MAIN ============ -->
+  <section id="stage-main" class="stage stage--main" hidden aria-label="For Yanna">
+
+    <button id="music-toggle" class="music-toggle" type="button" hidden aria-label="Play music" aria-pressed="false">
+      <span class="music-icon">♪</span>
+    </button>
+
+    <div class="photo-wrap" id="photo-wrap">
+      <div class="photo-glow" aria-hidden="true"></div>
+      <div class="photo-frame" id="photo-frame">
+        <img id="yanna-photo" class="photo-img" src="assets/yanna.jpg" alt="Yanna" draggable="false">
+        <div class="photo-placeholder" id="photo-placeholder" aria-hidden="true">
+          <span class="placeholder-mark">Y</span>
+        </div>
+        <div class="photo-sheen" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <div class="main-text">
+      <h2 id="headline" class="headline">I LOVE YOU</h2>
+      <p id="subline" class="subline">Yanna.</p>
+    </div>
+
+    <button id="final-affordance" class="final-affordance" type="button" hidden aria-label="Continue">♡</button>
+  </section>
+
+  <!-- ============ CINEMATIC OVERLAY ============ -->
+  <section id="stage-cinematic" class="stage stage--cinematic" hidden aria-label="I love you">
+    <p id="cinematic-text" class="cinematic-text">I LOVE YOU</p>
+  </section>
+
+  <!-- ============ SECRET SURPRISE ============ -->
+  <section id="stage-secret" class="stage stage--secret" hidden aria-label="A secret">
+    <p id="secret-text" class="secret-text"></p>
+  </section>
+
+  <!-- ============ FINAL ============ -->
+  <section id="stage-final" class="stage stage--final" hidden aria-label="The end">
+    <p id="final-text" class="final-text"></p>
+    <button id="restart-dot" class="restart-dot" type="button" aria-label="Begin again"></button>
+  </section>
+
+  <div id="tap-layer" aria-hidden="true"></div>
+
+  <audio id="bg-audio" loop preload="none">
+    <source src="assets/audio/theme.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
