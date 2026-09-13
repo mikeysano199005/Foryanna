@@ -42,6 +42,11 @@ mostly works, but a local server avoids browser file:// restrictions.)
 
 ## Customize later
 
+- **The date** (09 · 10) shows up in three places: the timestamp on
+  the photo (`.photo-timestamp` in `index.html`), the small caption
+  under her name (`.since-line`), and a line in the final screen
+  (`js/script.js`, the `lines` array inside the `final-affordance`
+  click handler) — update all three if it changes.
 - **Tap threshold** for the cinematic moment: `CINEMATIC_THRESHOLD` in
   `js/script.js`
 - **Phrases** that float up on tap: the `phrasePool` array in

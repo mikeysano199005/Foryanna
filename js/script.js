@@ -197,6 +197,9 @@
     'I love you more.',
     'still you.',
     'always you.',
+    'only you.',
+    'my favorite person.',
+    'since 09.10.',
     '♡',
   ];
   let phraseBag = [];
@@ -365,7 +368,14 @@
     stages.final.hidden = false;
     setState('final');
 
-    const lines = ['Yanna', 'I love you.', "That's it.", 'I just wanted you to know. ♡'];
+    const lines = [
+      'Yanna',
+      'since September 10th,',
+      "it's been you.",
+      'I love you.',
+      "That's it.",
+      'I just wanted you to know. ♡',
+    ];
     const holdMs = reducedMotion ? 400 : 2000;
     const fadeMs = reducedMotion ? 50 : 700;
 

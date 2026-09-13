@@ -257,6 +257,25 @@ h1, h2, p { margin: 0; }
 }
 .photo-img[data-broken="true"] { display: none; }
 
+.photo-timestamp {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  z-index: 4;
+  font-family: 'DM Sans', var(--sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: rgba(255, 176, 94, 0.78);
+  text-shadow: 0 0 8px rgba(255, 150, 60, 0.35);
+  pointer-events: none;
+  opacity: 0;
+}
+.stage--main.is-active .photo-timestamp {
+  animation: fadeIn 1.2s var(--ease-soft) forwards;
+  animation-delay: 2.1s;
+}
+
 .photo-placeholder {
   position: absolute;
   inset: 0;
@@ -328,6 +347,15 @@ h1, h2, p { margin: 0; }
   font-size: clamp(1.1rem, 5vw, 1.5rem);
   color: var(--dim);
   transition: opacity 0.5s var(--ease-soft);
+}
+
+.since-line {
+  margin-top: 0.3em;
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: clamp(0.72rem, 3vw, 0.82rem);
+  letter-spacing: 0.06em;
+  color: var(--dimmer);
 }
 
 /* --- music toggle --- */
