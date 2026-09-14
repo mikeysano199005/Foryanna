@@ -191,15 +191,14 @@
 
   const phrasePool = [
     'I love you.',
-    'I really love you.',
-    'I love youuu.',
-    'I love you, Yanna.',
-    'I love you more.',
+    'your voice does something to me.',
     'still you.',
     'always you.',
     'only you.',
     'my favorite person.',
     'since 09.10.',
+    'I mean it.',
+    'you have no idea.',
     '♡',
   ];
   let phraseBag = [];
@@ -277,7 +276,7 @@
   function triggerCinematic() {
     setState('cinematic');
     stages.cinematic.hidden = false;
-    cinematicText.textContent = 'I LOVE YOU';
+    cinematicText.textContent = 'YOUR VOICE';
     cinematicText.className = 'cinematic-text';
 
     void cinematicText.offsetWidth; // restart animation
@@ -286,7 +285,7 @@
     const growDuration = reducedMotion ? 50 : 2800;
 
     window.setTimeout(() => {
-      cinematicText.textContent = 'Yanna,\nI love you.';
+      cinematicText.textContent = 'is my favorite sound.';
       cinematicText.className = 'cinematic-text is-settling';
 
       const settleDuration = reducedMotion ? 50 : 1600;
@@ -294,7 +293,7 @@
         stages.cinematic.hidden = true;
         setState('main');
         headline.textContent = 'Yanna,';
-        subline.textContent = 'I love you.';
+        subline.textContent = 'still my favorite sound.';
         window.setTimeout(() => {
           finalAffordance.hidden = false;
           requestAnimationFrame(() => finalAffordance.classList.add('is-shown'));
@@ -371,8 +370,8 @@
     const lines = [
       'Yanna',
       'since September 10th,',
-      "it's been you.",
-      'I love you.',
+      'your voice has been stuck in my head —',
+      'in the best way.',
       "That's it.",
       'I just wanted you to know. ♡',
     ];
